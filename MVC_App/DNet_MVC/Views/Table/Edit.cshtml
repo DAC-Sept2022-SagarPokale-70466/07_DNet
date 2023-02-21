@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+
+    <form action="/Table/Edit" method="post">
+
+
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        No :
+                    </td>
+                    <td>
+                        @Model.Id <br />
+                        <input type="hidden" name="Id" value="@Model.Id" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> Name : </td>
+                    <td>
+                        <input type="text" name="Name" value="@Model.Name" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> Address : </td>
+                    <td>
+                        <input type="text" name="Address" value="@Model.Address" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" class="btn btn-primary" name="btn" value="Update" />
+                    </td>
+                </tr>
+            </table>
+        </center>
+
+
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignIn</title>
+</head>
+<body>
+    <form action="/Auth/AfterSignIn" method="post">
+
+        <center>
+            <tabel>
+                <tr>
+                    <td>UserName</td>
+                    <td>
+                        <input type="text" name="UserName" value="" />
+                    </td>
+                </tr>
+                <br />
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" name="Password" value="" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="Submit" name="btn" value="LogIn" />
+                    </td>
+                </tr>
+            </tabel>
+            <div style="color : red">
+                @ViewBag.Message
+            </div>
+
+
+        </center>
+
+    </form>
+</body>
+</html>

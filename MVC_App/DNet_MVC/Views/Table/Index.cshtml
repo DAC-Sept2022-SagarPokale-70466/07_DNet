@@ -1,0 +1,39 @@
+﻿@model List<DNet_MVC.Models.Table>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index1</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="table table-responsive" style="margin:20px">
+        <h1>@ViewBag.UserName</h1>
+        
+        <div class="float-right"><a href="/Auth/SignOut">LogOut</a></div>
+
+        <hr />
+
+        <table class="table table-bordered">
+            @foreach (var data in Model)
+            {
+                <tr>
+                    <td>@data.Id</td>
+                    <td>@data.Name</td>
+                    <td>@data.Address</td>
+                    <td>
+                        <a href="/Table/Edit/@data.Id" class="btn btn-warning">Edit</a>
+                    </td>
+                    <td>
+                        <a href="/Table/Delete/@data.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </table>
+        <a class="btn btn-primary" href="/Table/Create">Add New Record</a>
+    </div>
+</body>
+</html>
